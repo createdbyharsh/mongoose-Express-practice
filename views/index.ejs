@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Mini Whatsapp</title>
+  </head>
+  <body>
+    <h1>All chats</h1>
+    <div>
+      <% chats.map((x)=>{ %>
+      <div class="chat">
+        <p>From: <%= x.from %></p>
+        <p>To: <%= x.to %></p>
+        <div class="msg">
+          <p><%= x.msg %></p>
+        </div>
+        <hr />
+      </div>
+      <% }); %>
+    </div>
+  </body>
+</html>
