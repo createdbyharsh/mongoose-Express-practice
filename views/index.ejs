@@ -3,20 +3,23 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/style.css" />
     <title>Mini Whatsapp</title>
   </head>
   <body>
     <h1>All chats</h1>
-    <div>
+
+    <div class="main">
+      <form method="get">
+        <button>New chat</button>
+      </form>
       <% chats.map((x)=>{ %>
-      <div class="chat">
-        <p>From: <%= x.from %></p>
-        <p>To: <%= x.to %></p>
+      <div class="chats">
+        <p class="title">From: <%= x.from %></p>
+        <p class="title">To: <%= x.to %></p>
         <div class="msg">
           <p><%= x.msg %></p>
         </div>
-        <hr />
       </div>
       <% }); %>
     </div>
