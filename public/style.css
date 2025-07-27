@@ -53,3 +53,8 @@ button{
     background-color: greenyellow;
     color: black;
 }
+
+.new{
+    margin: 10px;
+    padding: 20px;
+}
