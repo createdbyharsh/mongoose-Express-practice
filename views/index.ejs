@@ -20,6 +20,18 @@
         <div class="msg">
           <p><%= x.msg %></p>
         </div>
+        <p>Time: <%=x.created_at.toString().split(" ")[4]%></p>
+        <p>
+          Time: <%=x.created_at.toString().split(" ").slice(0,4).join(" ")%>
+        </p>
+        <a href="/<%=x.id%>/edit"><button>edit</button></a>
+        <form
+          method="POST"
+          action="/<%=x.id%>/delete?_method=DELETE"
+          style="display: inline"
+        >
+          <button type="submit">delete</button>
+        </form>
       </div>
       <% }); %>
     </div>
